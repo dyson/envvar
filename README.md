@@ -1,9 +1,11 @@
 # Envvar
 
-[![GoDoc](https://godoc.org/github.com/dyson/envvar?status.svg)](http://godoc.org/github.com/dyson/envvar)
 [![Build Status](https://travis-ci.org/dyson/envvar.svg?branch=master)](https://travis-ci.org/dyson/envvar)
 [![Coverage Status](https://coveralls.io/repos/github/dyson/envvar/badge.svg?branch=master)](https://coveralls.io/github/dyson/envvar?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/dyson/envvar)](https://goreportcard.com/report/github.com/dyson/envvar)
+
+[![GoDoc](https://godoc.org/github.com/dyson/envvar?status.svg)](http://godoc.org/github.com/dyson/envvar)
+[![license](https://img.shields.io/github/license/dyson/envvar.svg)](https://github.com/dyson/envvar/blob/master/LICENSE)
 
 Go environment variable parsing in the style of flag.
 
