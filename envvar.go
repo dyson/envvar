@@ -5,43 +5,43 @@
 // license that can be found in the LICENSE file.
 
 /*
-	Package envvar implements environment variable parsing.
+Package envvar implements environment variable parsing.
 
-	Usage:
+Usage:
 
-	Define environment variables using envvar.String(), Bool(), Int(), etc.
+Define environment variables using envvar.String(), Bool(), Int(), etc.
 
-	This declares an integer envvar, ENVVARNAME, stored in the pointer ip, with type *int.
-		import "envvar"
-		var ip = envvar.Int("ENVVARNAME", 1234)
-	If you like, you can bind the envvar to a variable using the Var() functions.
-		var i int
-		func init() {
-			envvar.IntVar(&i, "ENVVARNAME", 1234)
-		}
-	Or you can create custom envvars that satisfy the Value interface (with
-	pointer receivers) and couple them to environment variable parsing by
-		envvar.Var(&envVarVal, "ENVVARNAME", "help message for envvar")
-	For such envvars, the default value is just the initial value of the variable.
+This declares an integer envvar, ENVVARNAME, stored in the pointer ip, with type *int.
+	import "envvar"
+	var ip = envvar.Int("ENVVARNAME", 1234)
+If you like, you can bind the envvar to a variable using the Var() functions.
+	var i int
+	func init() {
+		envvar.IntVar(&i, "ENVVARNAME", 1234)
+	}
+Or you can create custom envvars that satisfy the Value interface (with
+pointer receivers) and couple them to environment variable parsing by
+	envvar.Var(&envVarVal, "ENVVARNAME", "help message for envvar")
+For such envvars, the default value is just the initial value of the variable.
 
-	After all envvars are defined, call
-		envvar.Parse()
-	to parse the environment variables into the defined envvars.
+After all envvars are defined, call
+	envvar.Parse()
+to parse the environment variables into the defined envvars.
 
-	Envvars may then be used directly. If you're using the envvars themselves,
-	they are all pointers; if you bind to variables, they're values.
-		fmt.Println("ip has value ", *ip)
-		fmt.Println("i has value ", i)
+Envvars may then be used directly. If you're using the envvars themselves,
+they are all pointers; if you bind to variables, they're values.
+	fmt.Println("ip has value ", *ip)
+	fmt.Println("i has value ", i)
 
-	Integer envvars accept 1234, 0664, 0x1234 and may be negative.
-	Boolean envvars may be:
-		1, 0, t, f, T, F, true, false, TRUE, FALSE, True, False
-	Duration envvars accept any input valid for time.ParseDuration.
+Integer envvars accept 1234, 0664, 0x1234 and may be negative.
+Boolean envvars may be:
+	1, 0, t, f, T, F, true, false, TRUE, FALSE, True, False
+Duration envvars accept any input valid for time.ParseDuration.
 
-	The default set of envvars is controlled by top-level functions.
-	The EnvVarSet type allows one to define	independent sets of envvars,
-	which facilitates their independent parsing. The methods of EnvVarSet
-	are	analogous to the top-level functions for the default	envvar set.
+The default set of envvars is controlled by top-level functions.
+The EnvVarSet type allows one to define	independent sets of envvars,
+which facilitates their independent parsing. The methods of EnvVarSet
+are	analogous to the top-level functions for the default	envvar set.
 */
 package envvar
 
