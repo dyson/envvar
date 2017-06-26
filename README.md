@@ -81,10 +81,10 @@ func main() {
 
 Running example:
 ```
-$ A=100 B=1 go run example.go -a 2
-a set by flag precedence: 2
-b set by env var as no flag set: 1
-c set to default value as neither flag or env var set it: 0
+$ A=100 B=2 go run example.go -a 3
+a set by flag precedence: 3
+b set by env var as no flag set: 2
+c set to default value as neither flag or env var set it: 1
 ```
 
 ## Updates against flag
