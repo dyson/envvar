@@ -56,7 +56,7 @@ func main() {
 		c: 1,
 	}
 
-	// Define flags and envvars.
+	// define flags and envvars
 	flag.IntVar(&conf.a, "a", conf.a, "Value of a")
 	envvar.IntVar(&conf.a, "A", conf.a)
 
@@ -66,12 +66,12 @@ func main() {
 	flag.IntVar(&conf.c, "c", conf.c, "Value of c")
 	envvar.IntVar(&conf.c, "C", conf.c)
 
-	// Parse in reverse precedence order.
-	// Flags overwrite environment variables in this example.
+	// parse in reverse precedence order
+	// flags overwrite environment variables in this example
 	envvar.Parse()
 	flag.Parse()
 	
-	// Print results
+	// print results
 	fmt.Println("a set by flag precedence:", conf.a)
 	fmt.Println("b set by env var as no flag set:", conf.b) 
 	fmt.Println("c set to default value as neither flag or env var set it:", conf.c)
