@@ -21,7 +21,7 @@ If you like, you can bind the envvar to a variable using the Var() functions.
 	}
 Or you can create custom envvars that satisfy the Value interface (with
 pointer receivers) and couple them to environment variable parsing by
-	envvar.Var(&envVarVal, "ENVVARNAME", "help message for envvar")
+	envvar.Var(&envVarVal, "ENVVARNAME")
 For such envvars, the default value is just the initial value of the variable.
 
 After all envvars are defined, call
