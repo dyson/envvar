@@ -1,6 +1,6 @@
 # Envvar
 
-[![Build Status](https://travis-ci.org/dyson/envvar.svg?branch=master)](https://travis-ci.org/dyson/envvar)
+[![Go project version](https://badge.fury.io/go/github.com%2Fdyson%2Fenvvar.svg)](https://badge.fury.io/go/github.com%2Fdyson%2Fenvvar)
 [![Coverage Status](https://coveralls.io/repos/github/dyson/envvar/badge.svg?branch=master)](https://coveralls.io/github/dyson/envvar?branch=master)
 [![Code Climate](https://codeclimate.com/github/dyson/envvar/badges/gpa.svg)](https://codeclimate.com/github/dyson/envvar)
 [![Go Report Card](https://goreportcard.com/badge/github.com/dyson/envvar)](https://goreportcard.com/report/github.com/dyson/envvar)
