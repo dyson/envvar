@@ -33,7 +33,7 @@ $ go get github.com/dyson/envvar
 ## Usage
 Usage is essentially the same as the flag package. Here is an example program demonstrating envvar and the flag package being used together.
 
-```
+```go
 // example.go
 package main
 
